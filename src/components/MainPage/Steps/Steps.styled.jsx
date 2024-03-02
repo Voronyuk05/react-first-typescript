@@ -11,7 +11,7 @@ export const StepsComponent = styled.section`
     }
 
     @media screen and (max-width: 576px) {
-        height: 470vw;
+        height: 500vw;
         div {
             height: 480vw;
             align-items: center;

@@ -12,7 +12,7 @@ export const TermoregulationComponent = styled.section`
     }
 
     @media screen and (max-width: 576px) {
-        height: 230vw;
+        height: 250vw;
     }
     @media screen and (max-width: 380px) {
         height: 320vw;
