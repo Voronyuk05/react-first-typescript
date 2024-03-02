@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-first-typescript/static/css/main.3c2637af.css",
-    "main.js": "/react-first-typescript/static/js/main.d2a51149.js",
+    "main.js": "/react-first-typescript/static/js/main.95c61c97.js",
     "static/media/catalogue-bg.png": "/react-first-typescript/static/media/catalogue-bg.3b0caa6071dcfcb39674.png",
     "static/media/children.png": "/react-first-typescript/static/media/children.30326494f48c5982b0ab.png",
     "static/media/economy-slide.png": "/react-first-typescript/static/media/economy-slide.e9c575b6490e2ac6413d.png",
@@ -57,10 +57,10 @@
     "static/media/Dote.svg": "/react-first-typescript/static/media/Dote.df7e2cf9f05e54600b66626b3225a749.svg",
     "static/media/Line.svg": "/react-first-typescript/static/media/Line.d4cdf3bf0f47c9a9da13cd49d96ae991.svg",
     "main.3c2637af.css.map": "/react-first-typescript/static/css/main.3c2637af.css.map",
-    "main.d2a51149.js.map": "/react-first-typescript/static/js/main.d2a51149.js.map"
+    "main.95c61c97.js.map": "/react-first-typescript/static/js/main.95c61c97.js.map"
   },
   "entrypoints": [
     "static/css/main.3c2637af.css",
-    "static/js/main.d2a51149.js"
+    "static/js/main.95c61c97.js"
   ]
 }
