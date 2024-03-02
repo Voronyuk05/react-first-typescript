@@ -1,4 +1,3 @@
-import { memo } from "react";
 import { Category } from "../SlidesList.styled"
 import { useSection } from "../../../../../hooks/useSection";
 import { useActions } from "../../../../../hooks/useActions";

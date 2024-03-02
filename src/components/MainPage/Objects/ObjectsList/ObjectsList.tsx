@@ -24,6 +24,7 @@ export const ObjectList: React.FC<IObjectList> = ({objectsData}): JSX.Element =>
                             background={background} />
                         )
                     }
+                    return null
                 })}
             </List>
 

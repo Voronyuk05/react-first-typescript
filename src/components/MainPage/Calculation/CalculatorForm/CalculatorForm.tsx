@@ -1,5 +1,4 @@
 import { useCalculation } from "../../../../hooks/useCalculation";
-import { useActions } from "../../../../hooks/useActions";
 import { CalculationMoving } from "../CalculationMoving/CalculationMoving";
 import { FirstStep } from "../FirstStep/FirstStep";
 import { SecondStep } from "../SecondStep/SecondStep";

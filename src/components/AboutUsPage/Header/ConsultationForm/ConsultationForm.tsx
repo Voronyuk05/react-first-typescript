@@ -102,6 +102,7 @@ export const ConsultationForm: React.FC<IConsultationPorps> = ({modal, setModal}
                                                     </OptionButton>
                                                 )
                                             }
+                                            return null
                                         })}
                                     </WrapperOptions>
                                 </>

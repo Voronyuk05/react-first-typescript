@@ -25,6 +25,7 @@ export const SlidesList: React.FC<ISlideList> = memo(({slidesData}): JSX.Element
                         />
                     )
                 }
+                return null
             })}
         </SlidesComponent>
     )

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { GiftsComponent, GiftsContainer, GiftsTitle, WrapperGifts, GiftCard, FrontGift, FrontGiftTitle, Sign, BackGift, BackGiftImg, DiscountImg, GadjetImg, BackGiftParagraph } from "./Gifts.styled";
-import { H2, Paragraph, OrangeButton, HugeOrangeButton, GrayDarkButton } from "../../Global.styled";
+import { H2, Paragraph, HugeOrangeButton, GrayDarkButton } from "../../Global.styled";
 import signLightIcon from '../../../images/sign-light.png'
 import signDarkIcon from '../../../images/sign-dark.png'
 import discountIcon from '../../../images/discount.png'

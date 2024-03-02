@@ -1,4 +1,4 @@
-import { H3 } from "../../Global.styled";
+
 import styled from "styled-components";
 
 export const AboutUsMainComponent = styled.section`
