@@ -7,13 +7,9 @@ import { Navigation } from "../../Navigation/Navigation";
 import { Link } from "../../Global.styled"
 
 
-interface IHeaderProps  {
-    changePage?: Function;
-}
-
-export const Header: React.FC<IHeaderProps> = ({changePage}): JSX.Element => {
+export const Header: React.FC = (): JSX.Element => {
     const {checked} = useModalMenu()
-    const {handleSetChecked} = useActions()
+    const {handleSetChecked, handleChangeAppPage} = useActions()
 
     const checkedProps = {
         checked: checked
@@ -24,18 +20,18 @@ export const Header: React.FC<IHeaderProps> = ({changePage}): JSX.Element => {
             <Container>
                 <WrapperLogo>
                     <Logo />
-                    <Navigation checked={checked} >
+                    <Navigation >
                         <>
                             <Burger {...checkedProps} onClick={() => handleSetChecked()}>
                                 <span></span>
                             </Burger>
-                            <Link onClick={() => changePage?.('Main')}>Главная</Link>
-                            <Link onClick={() => changePage?.('AboutUs')}>О системе</Link>
-                            <Link onClick={() => changePage?.('History')}>Монтаж</Link>
-                            <Link onClick={() => changePage?.('History')}>Объекты</Link>
-                            <Link onClick={() => changePage?.('History')}>Отзывы</Link>
-                            <Link onClick={() => changePage?.('History')}>О компании</Link>
-                            <Link onClick={() => changePage?.('History')}>Контакты</Link>
+                            <Link onClick={() => handleChangeAppPage('Main')}>Главная</Link>
+                            <Link onClick={() => handleChangeAppPage('AboutUs')}>О системе</Link>
+                            <Link onClick={() => handleChangeAppPage('History')}>Монтаж</Link>
+                            <Link onClick={() => handleChangeAppPage('History')}>Объекты</Link>
+                            <Link onClick={() => handleChangeAppPage('History')}>Отзывы</Link>
+                            <Link onClick={() => handleChangeAppPage('History')}>О компании</Link>
+                            <Link onClick={() => handleChangeAppPage('History')}>Контакты</Link>
                         </>
                     </Navigation>
                     <Burger {...checkedProps} onClick={() => handleSetChecked()}>

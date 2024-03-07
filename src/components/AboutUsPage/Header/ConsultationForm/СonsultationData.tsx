@@ -24,19 +24,19 @@ export const consultationData: IConsultation[] = [
             {
                 type: 'button',
                 width: '100%',
-                value: 'Ответить на вопросы для расчета ',
+                value: 'Ответить на вопросы для расчета',
             },
             {
                 type: 'button',
                 width: '100%',
                 value: 'Получить консультацию по телефону',
-                call: true,
+                call: true
             },
             {
                 type: 'button',
                 width: '100%',
                 value: 'Вызвать замерщика на объект',
-                call: true,
+                call: true
             },
         ],
     },

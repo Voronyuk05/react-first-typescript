@@ -1,28 +1,25 @@
-import { useState } from "react";
+import { useActions } from '../../../hooks/useActions';
 import { HeaderComponent, WrapperLogo, Button, LogoText, Container } from './Header.styled'
 import { Logo } from '../../Logo/Logo';
 import { ConsultationForm } from "./ConsultationForm/ConsultationForm";
 
-interface IHeaderProps {
-    changePage: Function;
-}
 
-export const Header: React.FC<IHeaderProps> = ({changePage}): JSX.Element => {
-    const [modal, setModal] = useState<boolean>(false)
+export const Header: React.FC= (): JSX.Element => {
+    const {handleChangeModal} = useActions()
 
     return (
         <HeaderComponent>
             <Container>
                 <WrapperLogo>
-                    <Logo changePage={changePage}/>
+                    <Logo />
                     <LogoText>
                         Электро-водяное отопление от производителя
                     </LogoText>
                 </WrapperLogo>
-                <Button onClick={() => setModal(true)}>
+                <Button onClick={() => handleChangeModal(true)}>
                     Заказать консультацию
                 </Button>
-                <ConsultationForm modal={modal} setModal={setModal} />
+                <ConsultationForm  />
             </Container>
         </HeaderComponent>
     )

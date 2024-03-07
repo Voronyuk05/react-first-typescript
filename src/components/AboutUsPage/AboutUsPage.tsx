@@ -7,15 +7,12 @@ import { Gifts } from "./Gifts/Gifts"
 import { Questions } from "./Questions/Questions"
 import { Footer } from "../Footer/Footer"
 
-interface IPageProps {
-    changePage: Function
-}
   
 
-export const AboutUsPage: React.FC<IPageProps> = ({changePage}): JSX.Element => {
+export const AboutUsPage: React.FC = (): JSX.Element => {
     return (
         <>
-            <Header changePage={changePage} />
+            <Header />
             <main>
                 <AboutUsMain />
                 <Сomparison />

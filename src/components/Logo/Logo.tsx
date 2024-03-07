@@ -1,12 +1,11 @@
+import { useActions } from '../../hooks/useActions';
 import { LogoComponent } from './Logo.styled'
 import LogoSvg from './Logo.svg';
 
-interface ILogoProps  {
-    changePage?: Function;
-}
+export const Logo: React.FC = (): JSX.Element => {
+    const {handleChangeAppPage} = useActions()
 
-export const Logo: React.FC<ILogoProps> = ({changePage}): JSX.Element => {
     return (
-        <LogoComponent onClick={() => changePage?.('Main')} src={LogoSvg} alt="" />
+        <LogoComponent onClick={() => handleChangeAppPage('Main')} src={LogoSvg} alt="" />
     )
 }

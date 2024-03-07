@@ -12,15 +12,12 @@ import { Calculation } from "./Calculation/Calculation"
 import { Product } from "./Product/Product"
 import { Footer } from "../Footer/Footer"
 
-interface IPageProps {
-  changePage: Function
-}
 
-export const MainPage: React.FC<IPageProps> = ({changePage}): JSX.Element => {
+export const MainPage: React.FC = (): JSX.Element => {
     return (
         <>
             <TopBar />
-            <Header changePage={changePage} />
+            <Header />
             <main>
                 <HeroMain />
                 <Charter />

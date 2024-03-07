@@ -26,7 +26,7 @@ export const ComparisonSlideItem: React.FC<ISlideItemProps> = ({index, img, titl
             {list ? (
                 <SlideList>
                     {list.map(listText => (
-                        <ListItem>
+                        <ListItem key={listText}>
                             <H3Small weight='400'>{listText}</H3Small>
                         </ListItem>
                     ))}

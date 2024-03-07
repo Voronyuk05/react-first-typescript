@@ -1,30 +1,28 @@
+import { useApp } from "../hooks/useApp"
 import { MainPage } from "./MainPage/MainPage"
 import { AboutUsPage } from "./AboutUsPage/AboutUsPage"
-import { useState } from "react"
 
 
 export const App = () => {
-  const [page, setPage] = useState<string>('Main')
+  const {appPage} = useApp()
 
-  const handleChangePage = (page: string) => {
-    setPage(page)
-  }
-
-  if (page === 'Main') {
+  if (appPage === 'Main') {
     return (
       <>
-        <MainPage changePage={handleChangePage} />
+        <MainPage />
       </>
     )
-  } else if (page === 'AboutUs') {
+  } else if (appPage === 'AboutUs') {
     return (
       <>
-        <AboutUsPage changePage={handleChangePage}/>
+        <AboutUsPage />
       </>
     )
   } else {
     return (
-      <h1>Error</h1>
+      <>
+        <h1>Error</h1>
+      </>
     )
   }
 }

@@ -1,11 +1,11 @@
+import { useActions } from '../../../../hooks/useActions';
 import { QuestionsContentComponent, ContentTitle, ContentText, Contacts, ContactButton, ContactLink } from './QuestionsContent.styled'
 import { H2, H2Small, H3, Paragraph} from "../../../Global.styled";
 
-interface IContentProps {
-    setModal: Function
-}
 
-export const QuestionsContent: React.FC<IContentProps> = ({setModal}): JSX.Element => {
+export const QuestionsContent: React.FC = (): JSX.Element => {
+    const {handleChangeCallModal} = useActions()
+
     return (
         <QuestionsContentComponent>
             <ContentTitle>
@@ -18,7 +18,7 @@ export const QuestionsContent: React.FC<IContentProps> = ({setModal}): JSX.Eleme
                     <ContactLink href="https://www.whatsapp.com/?lang=uk">WhatsApp</ContactLink>
                     <ContactLink href="https://web.telegram.org/a/">Telegram</ContactLink>
                 </Contacts>
-                <ContactButton onClick={() => setModal(true)}>Позвоните, у меня остались вопросы</ContactButton>
+                <ContactButton onClick={() => handleChangeCallModal(true)}>Позвоните, у меня остались вопросы</ContactButton>
                 <Paragraph color='#B3B3B3' weight='500' align='center'>Нажимая на кнопку отправки, вы даете согласие на обработку своих персональных данных</Paragraph>
             </ContentText>
         </QuestionsContentComponent>
