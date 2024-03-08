@@ -1,14 +1,24 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { alert} from '@pnotify/core';
 import '@pnotify/core/dist/PNotify.css';
+import { ICalculation } from '../../types/calculation.types';
+
+const initialState: ICalculation = {
+    step: 1,
+    info: {
+        range: '',
+        place: '',
+        floor: '',
+        room: '',
+        coating: '',
+        material: '',
+    },
+    isSubmited: false
+}
 
 export const calculationSlice = createSlice({
     name: 'calculation',
-    initialState: {
-        step: 1,
-        info: {},
-        isSubmited: false
-    },
+    initialState,
     reducers: {
         handleChangeStep: (state, number) => {
             state.step += number.payload
@@ -23,7 +33,7 @@ export const calculationSlice = createSlice({
         },
 
         handleSubmit: (state) => {
-            if (Object.keys(state.info).length >= 6) {
+            if (Object.values(state.info).every(item => item !== '')) {
                 state.isSubmited = true
             } else {
                 alert({

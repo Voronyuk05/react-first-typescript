@@ -1,15 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { ICallForm } from '../../types/callForm.types';
+
+const initialState: ICallForm = {
+    isCallSubmited: false, 
+    callData: {       
+        name: '',
+        number: '',
+    },
+    callModal: false,
+}
 
 export const callFormSlice = createSlice({
     name: 'callForm',
-    initialState: {
-        isCallSubmited: false, 
-        callData: {       
-            name: '',
-            number: '',
-        },
-        callModal: false,
-    },
+    initialState,
     reducers: {
         handleCallSubmit: (state, e) => {
             e.payload.preventDefault()

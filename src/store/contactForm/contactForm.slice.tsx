@@ -1,24 +1,25 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { alert} from '@pnotify/core';
-import '@pnotify/core/dist/PNotify.css';
 import { consultationData } from '../../components/AboutUsPage/Header/ConsultationForm/СonsultationData';
+import { IContactForm } from '../../types/contactForm.types';
+
+const initialState: IContactForm = {
+    data: {},
+    modal: false,
+    page: 0,
+    area: '',
+}
 
 export const contactFormSlice = createSlice({
     name: 'contactForm',
-    initialState: {
-        data: {},
-        modal: false,
-        page: 0,
-        area: '',
-    },
+    initialState,
     reducers: {
         handleaAreaChange: (state, e) => {
             state.area = e.payload.currentTarget.value
         },
 
         handleDataChange: (state, e) => {
-            
             const {value, name} = e.payload.e.currentTarget
+            
             state.data = {
                 ...state.data,
                 [name]: value

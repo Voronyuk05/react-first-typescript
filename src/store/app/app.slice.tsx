@@ -1,10 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { IApp } from '../../types/app.types';
+
+
+const initialState: IApp = {
+    appPage: 'Main',
+}
 
 export const appSlice = createSlice({
     name: 'contactForm',
-    initialState: {
-        appPage: 'Main',
-    },
+    initialState,
     reducers: {
         handleChangeAppPage: (state, value) => {
             state.appPage = value.payload

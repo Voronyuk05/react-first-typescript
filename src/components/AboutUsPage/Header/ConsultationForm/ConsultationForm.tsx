@@ -2,7 +2,7 @@ import { useContactForm } from '../../../../hooks/useContactForm';
 import { useCallForm } from '../../../../hooks/useCallForm';
 import { useActions } from '../../../../hooks/useActions';
 import { ModalForm } from '../../../ModalForm/ModalForm';
-import { consultationData, IOptions, IConsultation } from "./СonsultationData";
+import { consultationData, IOptions, IConsultation } from './СonsultationData';
 import { ButtonBack, Arrow, WrapperOptions, OptionButton } from './ConsultationForm.styled'
 import { H2Small, HideButton, Input, H6, Paragraph, ItemTitle, LightButton } from "../../../Global.styled";
 import returnArrowIcon from '../../../../images/return-arrow.png'
@@ -42,7 +42,7 @@ export const ConsultationForm: React.FC = (): JSX.Element => {
                                         {options.map(({type, width, height, placeholder, value, call}: IOptions) => {
                                             if (type === 'button') {
                                                 return (
-                                                    <OptionButton key={value} type="button" name={name} width={width} height={height} data-call={call} value={value} option={data[name as keyof IOptions]} onClick={(e: React.ChangeEvent<HTMLInputElement>) => handleDataChange({e, call})}>
+                                                    <OptionButton key={value} type="button" name={name} width={width} height={height} data-call={call} value={value} option={data[name as keyof typeof data]} onClick={(e: React.ChangeEvent<HTMLInputElement>) => handleDataChange({e, call})}>
                                                         {value}
                                                     </OptionButton>
                                                 )
@@ -52,7 +52,7 @@ export const ConsultationForm: React.FC = (): JSX.Element => {
                                                 )
                                             } else if (type === 'send') {
                                                 return (
-                                                    <OptionButton type="button" name={name} width={width} value={area} option={data[name as keyof IOptions]} onClick={handleDataChange}>
+                                                    <OptionButton type="button" name={name} width={width} value={area} option={data[name as keyof typeof data]} onClick={(e: React.ChangeEvent<HTMLInputElement>) => handleDataChange({e, call})}>
                                                         {value}
                                                     </OptionButton>
                                                 )

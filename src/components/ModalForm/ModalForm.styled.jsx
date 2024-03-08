@@ -1,4 +1,4 @@
-import { HideButton } from "../Global.styled";
+import { HideButton, LightButton } from "../Global.styled";
 import styled from "styled-components";
 
 export const ModalFormComponent = styled.div`
@@ -46,6 +46,42 @@ export const ModalFormContainerEl = styled.form`
         }
         h6 {
             font-size: 1.5vw;
+        }
+    }
+
+
+    @media screen and (max-width: 576px) {
+        width: 95vw;
+        height: 120vw;
+        padding: 1vw 6vw 0vw 6vw;
+        box-sizing: border-box;
+        gap: 5vw;
+        h2 {
+            font-size: 7vw;
+            text-align:  center;
+        }
+        ${HideButton} {
+            width: 5vw;
+            height: 5vw;
+        }
+        input {
+            width: 80vw;
+            height: 10vw;
+            font-size: 5vw;
+            border-radius: 1vw;
+        }
+        h3 {
+            font-size: 4vw;
+        }
+        p {
+            font-size: 3.5vw;
+        }
+        h6 {
+            font-size: 3.5vw;
+        }
+        ${LightButton} {
+            font-size: 5vw;
+            padding: 5vw;
         }
     }
 

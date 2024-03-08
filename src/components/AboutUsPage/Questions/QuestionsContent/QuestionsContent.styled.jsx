@@ -51,7 +51,7 @@ export const ContentText = styled.div`
     justify-content: center;
     gap: 1.5vw;
     @media screen and (max-width: 576px) {
-        gap: 2vw;
+        gap: 3vw;
     }
 
     @media screen and (max-width: 380px) {
@@ -71,7 +71,7 @@ export const Contacts = styled.div`
 
 
     @media screen and (max-width: 576px) {
-        gap: 2vw;
+        gap: 3vw;
     }
 
     @media screen and (max-width: 380px) {

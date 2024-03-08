@@ -1,4 +1,4 @@
-import { H2, H2Small } from "../../Global.styled";
+import { H2, H2El, H2Small } from "../../Global.styled";
 import styled from "styled-components";
 
 export const QuestionsComponent = styled.section`
@@ -13,7 +13,7 @@ export const QuestionsComponent = styled.section`
     }
 
     @media screen and (max-width: 576px) {
-        height: 190vw;
+        height: 210vw;
     }
 
     @media screen and (max-width: 380px) {
@@ -45,7 +45,7 @@ export const Person = styled.div`
 
     @media screen and (max-width: 992px) {
         width: 70vw;
-        ${H2} {
+        ${H2El} {
             font-size: 5vw;
         }
         ${H2Small} {
@@ -55,7 +55,7 @@ export const Person = styled.div`
 
     @media screen and (max-width: 576px) {
         width: 90vw;
-        ${H2} {
+        ${H2El} {
             font-size: 8vw;
         }
         ${H2Small} {

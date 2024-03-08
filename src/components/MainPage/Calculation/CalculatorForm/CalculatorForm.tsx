@@ -6,21 +6,6 @@ import { ThirdStep } from "../ThirdStep/ThirdStep";
 import { Content, CalculationNav, Way, Completed } from "./CalculatorForm.styled";
 import { H2, H4Huge, FontDark } from "../../../Global.styled";
 
-export interface IStepProps {
-    handleChangeDate: Function
-    info: IPropsInfo
-}
-
-export interface IPropsInfo {
-    range?: string
-    place?: string
-    floor?: string
-    room?: string
-    plinth?: boolean
-    coating?: string
-    material?: string 
-}
-
 
 export const CalculatorForm: React.FC = (): JSX.Element => {
     const {step, isSubmited} = useCalculation()

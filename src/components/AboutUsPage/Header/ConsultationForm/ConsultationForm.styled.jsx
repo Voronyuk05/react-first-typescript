@@ -14,8 +14,15 @@ export const WrapperOptions = styled.div`
             width: 100%;
         }
     }
+
+    @media screen and (max-width: 576px) {
+        max-width: 80vw;
+        font-size: 5vw;
+        gap: 3vw;
+    }
+
     @media screen and (max-width: 380px) {
-        max-width: 90vw;
+        max-width: 80vw;
         gap: 4vw;
         input {
             width: 100%;
@@ -48,11 +55,13 @@ export const OptionButtonEl = styled.button`
         font-size: 2.5vw;
     }
 
-    @media screen and (max-width: 380px) {
-        width: 90vw;
-        height: 8vw;
-        font-size: 4.7vw;
+    @media screen and (max-width: 576px) {
+        width: 80vw;
+        height: 10vw;
+        font-size: 4vw;
+        border-radius: 1vw;
     }
+
 `
 
 export const OptionButton = ({ ...styles}) => {
@@ -79,6 +88,12 @@ export const ButtonBack = styled.button`
         font-size: 2.5vw;
     }
 
+    
+    @media screen and (max-width: 576px) {
+        font-size: 5vw;
+        height: 7vw;
+    }
+
     @media screen and (max-width: 380px) {
         font-size: 6vw;
         margin-bottom: 5vw;
@@ -89,6 +104,10 @@ export const Arrow = styled.img`
     width: 1vw;
     @media screen and (max-width: 992px) {
         width: 2vw;
+    }
+
+    @media screen and (max-width: 576px) {
+        width: 4vw;
     }
 
     @media screen and (max-width: 380px) {

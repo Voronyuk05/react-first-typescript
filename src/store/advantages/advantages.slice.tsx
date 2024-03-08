@@ -1,10 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
+import {IAdvantagesSlice} from '../../types/advantages.types'
+
+const initialState: IAdvantagesSlice = {
+    section: 'Экономия электроэнергии' 
+}
 
 export const advantagesSlice = createSlice({
     name: 'advantages',
-    initialState: {
-        section: 'Экономия электроэнергии'
-    },
+    initialState,
     reducers: {
         handleChangeSection: (state, category) => {
             state.section = category.payload

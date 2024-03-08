@@ -4,7 +4,6 @@ import { H2Small, HideButton, Input, H6, LightButton } from "../Global.styled";
 import { ModalForm } from "../ModalForm/ModalForm";
 
 
-
 export const ContactForm: React.FC = (): JSX.Element => {
     const {callData, callModal} = useCallForm()
     const {handleCallInputChange, handleChangeCallModal, handleChangeModal} = useActions()
