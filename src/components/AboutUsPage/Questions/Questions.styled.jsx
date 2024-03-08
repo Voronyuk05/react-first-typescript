@@ -1,4 +1,4 @@
-import { H2, H2El, H2Small } from "../../Global.styled";
+import { H2El, H2Small } from "../../Global.styled";
 import styled from "styled-components";
 
 export const QuestionsComponent = styled.section`
