@@ -1,28 +1,17 @@
-import { useApp } from "../hooks/useApp"
 import { MainPage } from "./MainPage/MainPage"
 import { AboutUsPage } from "./AboutUsPage/AboutUsPage"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 
 export const App = () => {
-  const {appPage} = useApp()
-
-  if (appPage === 'Main') {
-    return (
-      <>
-        <MainPage />
-      </>
-    )
-  } else if (appPage === 'AboutUs') {
-    return (
-      <>
-        <AboutUsPage />
-      </>
-    )
-  } else {
-    return (
-      <>
-        <h1>Error</h1>
-      </>
-    )
-  }
+  return (
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="react-first-typescript/" element={<MainPage/>}/>
+          <Route path="react-first-typescript/about" element={<AboutUsPage/>}/>
+        </Routes>
+      </BrowserRouter>
+    </div>
+  )
 }

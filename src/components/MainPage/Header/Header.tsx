@@ -9,7 +9,7 @@ import { Link } from "../../Global.styled"
 
 export const Header: React.FC = (): JSX.Element => {
     const {checked} = useModalMenu()
-    const {handleSetChecked, handleChangeAppPage} = useActions()
+    const {handleSetChecked} = useActions()
 
     const checkedProps = {
         checked: checked
@@ -25,13 +25,13 @@ export const Header: React.FC = (): JSX.Element => {
                             <Burger {...checkedProps} onClick={() => handleSetChecked()}>
                                 <span></span>
                             </Burger>
-                            <Link onClick={() => handleChangeAppPage('Main')}>Главная</Link>
-                            <Link onClick={() => handleChangeAppPage('AboutUs')}>О системе</Link>
-                            <Link onClick={() => handleChangeAppPage('History')}>Монтаж</Link>
-                            <Link onClick={() => handleChangeAppPage('History')}>Объекты</Link>
-                            <Link onClick={() => handleChangeAppPage('History')}>Отзывы</Link>
-                            <Link onClick={() => handleChangeAppPage('History')}>О компании</Link>
-                            <Link onClick={() => handleChangeAppPage('History')}>Контакты</Link>
+                            <Link href='/react-first-typescript/' >Главная</Link>
+                            <Link href='/react-first-typescript/about'>О системе</Link>
+                            <Link >Монтаж</Link>
+                            <Link >Объекты</Link>
+                            <Link >Отзывы</Link>
+                            <Link >О компании</Link>
+                            <Link >Контакты</Link>
                         </>
                     </Navigation>
                     <Burger {...checkedProps} onClick={() => handleSetChecked()}>

@@ -1,19 +1,21 @@
-import { Header } from "./Header/Header"
-import { TopBar } from "./TopBar/TopBar"
-import { HeroMain } from "./HeroMain/HeroMain"
-import { Charter } from "./Charter/Charter"
+import { Footer } from "../Footer/Footer"
 import { Advantages } from "./Advantages/Advantages"
+import { Calculation } from "./Calculation/Calculation"
 import { Catalogue } from "./Catalogue/Catalogue"
+import { Charter } from "./Charter/Charter"
+import { Header } from "./Header/Header"
+import { HeroMain } from "./HeroMain/HeroMain"
+import { Objects } from "./Objects/Objects"
+import { Product } from "./Product/Product"
+import { Statistics } from "./Statistics/Statistics"
 import { Steps } from "./Steps/Steps"
 import { Termoregulation } from "./Termoregulation/Termoregulation"
-import { Statistics } from "./Statistics/Statistics"
-import { Objects } from "./Objects/Objects"
-import { Calculation } from "./Calculation/Calculation"
-import { Product } from "./Product/Product"
-import { Footer } from "../Footer/Footer"
+import { TopBar } from "./TopBar/TopBar"
+
 
 
 export const MainPage: React.FC = (): JSX.Element => {
+    
     return (
         <>
             <TopBar />

@@ -7,7 +7,6 @@ import { actions as modalMenuActions } from '../store/modalMenu/modalMenu.slice'
 import { actions as calculationActions } from '../store/calculation/calculation.slice'
 import { actions as contactFormActions } from '../store/contactForm/contactForm.slice'
 import { actions as callFormActions } from '../store/callForm/callForm.slice'
-import { actions as appActions } from "../store/app/app.slice"
 
 const rootActions = {
     ...advantagesActions,
@@ -16,7 +15,6 @@ const rootActions = {
     ...calculationActions,
     ...contactFormActions,
     ...callFormActions,
-    ...appActions,
 }
 
 export const useActions = () => {
